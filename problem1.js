@@ -5,8 +5,10 @@ const processValue = (value) => {
         return value.length;
     }
     if (typeof value === 'number') {
-        return (value * value);
+        return value * value;
     }
 };
-const stringResult = processValue('sazid');
-const numberResult = processValue(5);
+const stringValue = processValue('sazid');
+const numberValue = processValue(7);
+console.log(stringValue);
+console.log(numberValue);
