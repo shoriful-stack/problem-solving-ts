@@ -11,5 +11,7 @@
         }
     });
     console.log(person1);
+    const person2 = getAddressCity({});
+    console.log(person2);
     //
 }
