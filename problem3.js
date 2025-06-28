@@ -1,66 +1,35 @@
 "use strict";
 {
     //
+    // Create a type guard function isCat that checks if an object is an instance of a Cat class. If it does, the function says "yes, it's a cat." If it doesn't match, the function says "no, it's not a cat."
     class Animal {
-        constructor(name, species) {
+        constructor(name) {
             this.name = name;
-            this.species = species;
         }
         makeSound() {
-            console.log('I can make sound');
-        }
-    }
-    class Dog extends Animal {
-        constructor(name, species) {
-            super(name, species);
-        }
-        makeBark() {
-            console.log('I am barking');
+            console.log('no, it is not a cat');
         }
     }
     class Cat extends Animal {
-        constructor(name, species) {
-            super(name, species);
+        constructor(name) {
+            super(name);
         }
-        makeMeaw() {
-            console.log('I am mewaing');
+        makeMeaow() {
+            console.log('yes, it is a cat');
         }
     }
-    const dog = new Dog('Ariffa', 'Dog');
-    const cat = new Cat('Manikka', 'Cat');
-    console.log(dog);
-    console.log(cat);
-    const getAnimal = (animal) => {
-        if (animal instanceof Dog) {
-            animal.makeBark();
-        }
-        else if (animal instanceof Cat) {
-            animal.makeMeaw();
-        }
-        else {
-            animal.makeSound();
-        }
-    };
-    getAnimal(dog);
-    getAnimal(cat);
-    const isDog = (animal) => {
-        return animal instanceof Dog;
-    };
     const isCat = (animal) => {
         return animal instanceof Cat;
     };
-    const getAnimal2 = (animal) => {
-        if (isDog(animal)) {
-            animal.makeBark();
-        }
-        else if (isCat(animal)) {
-            animal.makeMeaw();
+    const checkCat = (animal) => {
+        if (isCat(animal)) {
+            animal.makeMeaow();
         }
         else {
             animal.makeSound();
         }
     };
-    getAnimal2(dog);
-    getAnimal2(cat);
+    const cat = new Cat('Manikka');
+    checkCat(cat);
     //
 }
