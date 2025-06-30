@@ -8,6 +8,8 @@
     const numArray = [1, 2, 3, 4];
     const stringArray = ['banana', 'mango', 4, 'Honey'];
     console.log(findFirstOccurrence(numArray, 3));
-    console.log(findFirstOccurrence(stringArray, 'banana'));
+    console.log(findFirstOccurrence(stringArray, 'Honey'));
+    console.log(findFirstOccurrence(numArray, 33));
+    console.log(findFirstOccurrence(stringArray, 'kola'));
     //
 }
